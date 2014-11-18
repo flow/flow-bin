@@ -13,7 +13,8 @@
     "flow": "cli.js"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "npm run postinstall && node test.js",
+    "postinstall": "node lib/install.js"
   },
   "engines": {
     "node": ">=0.10.0"
