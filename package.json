@@ -1,6 +1,6 @@
 {
   "name": "flow-bin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Binary wrapper for Flow - a static type checker for JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/flow-bin",
@@ -13,14 +13,10 @@
     "flow": "cli.js"
   },
   "scripts": {
-    "postinstall": "node lib/install.js",
-    "test": "npm run postinstall && node test.js"
+    "test": "node test.js"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "node test.js"
   },
   "files": [
     "index.js",
