@@ -1,0 +1,53 @@
+{
+  "name": "flow-bin",
+  "version": "0.0.0",
+  "description": "Binary wrapper for Flow - a static type checker for JavaScript",
+  "license": "MIT",
+  "repository": "sindresorhus/flow-bin",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "flow": "cli.js"
+  },
+  "scripts": {
+    "postinstall": "node lib/install.js",
+    "test": "npm run postinstall && node test.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js",
+    "lib"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "binary",
+    "flow",
+    "facebook",
+    "type",
+    "inference",
+    "check",
+    "checker",
+    "javascript",
+    "js",
+    "wrapper"
+  ],
+  "dependencies": {
+    "bin-wrapper": "^2.0.0",
+    "imagemin-log": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.0.4",
+    "bin-check": "^1.0.0"
+  }
+}
