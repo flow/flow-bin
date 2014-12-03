@@ -1,6 +1,6 @@
 {
   "name": "flow-bin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Binary wrapper for Flow - a static type checker for JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/flow-bin",
@@ -8,6 +8,11 @@
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "http://sindresorhus.com"
+  },
+  "contributors": {
+    "name": "Michael Robinson",
+    "email": "mike@pagesofinterest.net",
+    "url": "http://pagesofinterest.net"
   },
   "bin": {
     "flow": "cli.js"
@@ -40,7 +45,7 @@
     "wrapper"
   ],
   "dependencies": {
-    "bin-wrapper": "^2.0.0",
+    "bin-wrapper": "^2.1.0",
     "imagemin-log": "^1.0.0"
   },
   "devDependencies": {
