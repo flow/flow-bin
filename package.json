@@ -40,7 +40,7 @@
     "wrapper"
   ],
   "dependencies": {
-    "bin-wrapper": "^2.0.0",
+    "bin-wrapper": "^2.1.0",
     "imagemin-log": "^1.0.0"
   },
   "devDependencies": {
