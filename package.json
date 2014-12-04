@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "bin-wrapper": "^2.0.0",
-    "imagemin-log": "^1.0.0"
+    "logalot": "^2.0.0"
   },
   "devDependencies": {
     "ava": "^0.0.4",
