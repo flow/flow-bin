@@ -7,7 +7,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "bin": {
     "flow": "cli.js"
@@ -44,7 +44,7 @@
     "logalot": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^0.0.4",
+    "ava": "0.0.4",
     "bin-check": "^1.0.0"
   }
 }
