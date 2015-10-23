@@ -1,7 +1,7 @@
 {
   "name": "flow-bin",
   "version": "0.18.1",
-  "description": "Binary wrapper for Flow - a static type checker for JavaScript",
+  "description": "Binary wrapper for Flow - A static type checker for JavaScript",
   "license": "MIT",
   "repository": "sindresorhus/flow-bin",
   "author": {
@@ -13,7 +13,7 @@
     "flow": "cli.js"
   },
   "scripts": {
-    "test": "npm run postinstall && node test.js",
+    "test": "npm run postinstall && xo && ava",
     "postinstall": "node lib/install.js"
   },
   "engines": {
@@ -44,7 +44,13 @@
     "logalot": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "0.0.4",
-    "bin-check": "^1.0.0"
+    "ava": "*",
+    "bin-check": "^3.0.0",
+    "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }
