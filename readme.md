@@ -1,4 +1,4 @@
-# flow-bin [![Build Status](https://travis-ci.org/sindresorhus/flow-bin.svg?branch=master)](https://travis-ci.org/sindresorhus/flow-bin)
+# flow-bin [![Build Status](https://travis-ci.org/flowtype/flow-bin.svg?branch=master)](https://travis-ci.org/sindresorhus/flow-bin)
 
 > Binary wrapper for [Flow](http://flowtype.org) - A static type checker for JavaScript
 
@@ -34,4 +34,4 @@ execFile(flow, ['check'], (err, stdout) => {
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+flow-bin is BSD-licensed. We also provide an additional patent grant.
