@@ -1,4 +1,4 @@
-# flow-bin [![Build Status](https://travis-ci.org/flowtype/flow-bin.svg?branch=master)](https://travis-ci.org/sindresorhus/flow-bin)
+# flow-bin [![Build Status](https://travis-ci.org/flowtype/flow-bin.svg?branch=master)](https://travis-ci.org/flowtype/flow-bin)
 
 > Binary wrapper for [Flow](http://flowtype.org) - A static type checker for JavaScript
 
