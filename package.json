@@ -40,7 +40,7 @@
     "wrapper"
   ],
   "dependencies": {
-    "bin-wrapper": "^2.0.0",
+    "bin-wrapper": "^3.0.2",
     "logalot": "^2.0.0"
   },
   "devDependencies": {
