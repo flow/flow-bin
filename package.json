@@ -40,12 +40,13 @@
     "wrapper"
   ],
   "dependencies": {
-    "bin-wrapper": "^3.0.2",
-    "logalot": "^2.0.0"
+    "follow-redirects": "^0.1.0",
+    "spawn-sync": "^1.0.15",
+    "unzip2": "^0.2.5"
   },
   "devDependencies": {
     "ava": "*",
-    "bin-check": "^3.0.0",
+    "rimraf": "^2.5.2",
     "xo": "*"
   }
 }
