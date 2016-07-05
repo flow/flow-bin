@@ -7,5 +7,5 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 'use strict';
-var bin = require('./lib');
-module.exports = bin.path();
+
+module.exports = require('./lib').path;
