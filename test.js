@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -6,10 +7,21 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-import test from 'ava';
-import binCheck from 'bin-check';
-import flow from './';
+var fs = require('fs');
 
-test('returns path to binary and verify that it is working', async t => {
-	t.true(await binCheck(flow, ['--version']));
-});
+// osx
+process.platform = 'darwin';
+delete require.cache[require.resolve('./')];
+fs.statSync(require('./'));
+
+// linux
+process.platform = 'linux';
+process.arch = 'x64'
+delete require.cache[require.resolve('./')];
+fs.statSync(require('./'));
+
+// windows
+process.platform = 'win32';
+process.arch = 'x64'
+delete require.cache[require.resolve('./')];
+fs.statSync(require('./'));

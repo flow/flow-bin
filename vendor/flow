@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * Copyright (c) 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -7,15 +8,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 'use strict';
-var log = require('logalot');
-var bin = require('./');
 
-bin.run(['--version'], function (err) {
-	if (err) {
-		log.error(err.message);
-		log.error('flow binary test failed');
-		return;
-	}
+/**
+ * THIS USE IS DEPRECATED! Use `./node_modules/.bin/flow` instead.
+ */
 
-	log.success('flow binary test passed successfully');
-});
+require('../cli');
