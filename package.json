@@ -22,6 +22,7 @@
     "flow-linux64-v*",
     "flow-osx-v*",
     "flow-win64-v*",
+    "vendor",
     "cli.js",
     "index.js",
     "SHASUM256.txt"
