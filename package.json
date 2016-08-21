@@ -13,7 +13,8 @@
     "flow": "cli.js"
   },
   "scripts": {
-    "test": "shasum -c SHASUM256.txt && ./test.js"
+    "test": "echo \"Error: Run 'make test' instead.\" && exit 1",
+    "verify": "shasum -c SHASUM256.txt"
   },
   "engines": {
     "node": ">=0.10.0"
