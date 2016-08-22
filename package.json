@@ -13,16 +13,20 @@
     "flow": "cli.js"
   },
   "scripts": {
-    "test": "npm run postinstall && xo && ava",
-    "postinstall": "node lib/install.js"
+    "test": "echo \"Error: Run 'make test' instead.\" && exit 1",
+    "verify": "shasum -c SHASUM256.txt"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "files": [
-    "index.js",
+    "flow-linux64-v*/flow",
+    "flow-osx-v*/flow",
+    "flow-win64-v*/flow.exe",
+    "vendor",
     "cli.js",
-    "lib"
+    "index.js",
+    "SHASUM256.txt"
   ],
   "keywords": [
     "cli-app",
@@ -38,14 +42,5 @@
     "javascript",
     "js",
     "wrapper"
-  ],
-  "dependencies": {
-    "bin-wrapper": "^3.0.2",
-    "logalot": "^2.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "bin-check": "^3.0.0",
-    "xo": "*"
-  }
+  ]
 }
