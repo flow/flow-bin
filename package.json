@@ -20,7 +20,9 @@
     "node": ">=0.10.0"
   },
   "files": [
-    "flow-*-v*",
+    "flow-linux64-v*/flow",
+    "flow-osx-v*/flow",
+    "flow-win64-v*/flow.exe",
     "vendor",
     "cli.js",
     "index.js",
