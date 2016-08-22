@@ -24,7 +24,7 @@ SHASUM256.txt: $(FLOW_BINS)
 
 get-flow = \
 	mkdir -p "$@"; \
-	curl -L "https://github.com/facebook/flow/releases/download/v$(*F)/$(@D).zip" \
+	curl -s -L "https://github.com/facebook/flow/releases/download/v$(*F)/$(@D).zip" \
 		| tar xz -C "$(@D)" --strip-components=1 -- "flow/$(@F)"; \
 	touch "$@"
 
