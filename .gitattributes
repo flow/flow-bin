@@ -2,3 +2,4 @@
 * text eol=lf
 *.png binary
 *.gif binary
+flow-*-v*/* binary
