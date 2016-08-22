@@ -43,10 +43,7 @@ flow-bin is BSD-licensed. We also provide an additional patent grant.
 
 1. Update the "version" in `package.json` to reflect the flow version to publish. (For now, `flow-bin`'s version is also the version of the `flow` binary).
 2. Run `make`.
-  * There should be 8 uncommitted changes at this point:
-    - 3x old flow versions removed.
-    - 3x new flow versions added.
-    - Updated `SHASUM256.txt` and `package.json`.
+  * There should be 2 uncommitted changes at this point: `SHASUM256.txt` and `package.json`.
 3. Commit the changes with the message `Updated binary to v0.30.0`, with the correct version.
 4. Push/merge to `master`.
 5. Tag the update:
@@ -58,6 +55,8 @@ flow-bin is BSD-licensed. We also provide an additional patent grant.
   git tag v$(node -p 'require("./package.json").version') &&
   git push v$(node -p 'require("./package.json").version')
   ```
+
+6. Publish to npm.
 
 ### Inspect a Release Before Publishing
 
