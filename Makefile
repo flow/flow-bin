@@ -23,10 +23,11 @@ SHASUM256.txt: $(FLOW_BINS)
 	shasum -a 256 $^ > $@
 
 get-flow = \
-	mkdir -p "$@"; \
-	curl -s -L "https://github.com/facebook/flow/releases/download/v$(*F)/$(@D).zip" \
-		| tar xz -C "$(@D)" --strip-components=1 -- "flow/$(@F)"; \
-	touch "$@"
+	curl -O -L https://github.com/facebook/flow/releases/download/v$(*F)/$(@D).zip; \
+	unzip $(@D).zip flow/$(@F); \
+	mv flow $(@D); \
+	rm $(@D).zip; \
+	touch $@
 
 flow-linux64-v%/flow:
 	$(get-flow)
