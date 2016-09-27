@@ -9,8 +9,4 @@
  */
 'use strict';
 
-/**
- * THIS USE IS DEPRECATED! Use `./node_modules/.bin/flow` instead.
- */
-
 require('../cli');
