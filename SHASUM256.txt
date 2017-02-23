@@ -1,3 +1,3 @@
-96b2486f4439af1cd6cb7cc6de6dedb967ccbb66c7aab5fe6cbe0ae385f1d8f5  flow-linux64-v0.39.0/flow
-51ef52d04e98d4e0f16a86def88e9c93d3e9305d75acb26847e11329308ca9ea  flow-osx-v0.39.0/flow
-5e469dd9674d351f5cad6ce2beafd139e309c965e9b3b0dbe8e80c4e0f5113ee  flow-win64-v0.39.0/flow.exe
+d4cf8cb81ba6f373ae218cb8707e0322e60ba7e01d0f7dcdb99dd0dd0272c6e7  flow-linux64-v0.40.0/flow
+197cf52e213de3336ad1097d36c68734b25dcf25af11ec6c7ff824750f1403ed  flow-osx-v0.40.0/flow
+5b041f05ff698ddd2a1f349e9ddaec8feb3a7401b29e0ec33cd51777e2ae2818  flow-win64-v0.40.0/flow.exe
