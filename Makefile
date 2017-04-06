@@ -1,6 +1,7 @@
 FLOW_VERSION ?= $(shell node -p 'require("./package.json").version')
 FLOW_BINS = \
 	flow-linux64-v$(FLOW_VERSION)/flow \
+	flow-linux64-musl-v$(FLOW_VERSION)/flow \
 	flow-osx-v$(FLOW_VERSION)/flow \
 	flow-win64-v$(FLOW_VERSION)/flow.exe
 
@@ -31,6 +32,12 @@ get-flow = \
 
 flow-linux64-v%/flow:
 	$(get-flow)
+
+flow-linux64-musl-v%/flow:
+	mkdir -p $(@D) && \
+	cd flow-linux64-musl-build && \
+	docker build --build-arg FLOW_TAG=v$(*F) -t flow-musl-build . && \
+	docker run -v $(PWD)/$(@D):/out --rm -ti flow-musl-build cp /tmp/flow/bin/flow /out/ \
 
 flow-osx-v%/flow:
 	$(get-flow)
