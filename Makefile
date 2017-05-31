@@ -3,6 +3,12 @@ FLOW_BINS = \
 	flow-linux64-v$(FLOW_VERSION)/flow \
 	flow-osx-v$(FLOW_VERSION)/flow \
 	flow-win64-v$(FLOW_VERSION)/flow.exe
+	
+ifdef FLOW_BINARY_MIRROR
+	BASE_URL=$(FLOW_BINARY_MIRROR)
+else
+	BASE_URL=https://github.com/facebook/flow/releases/download/v
+endif
 
 .PHONY: all
 all: clean build test
@@ -23,7 +29,7 @@ SHASUM256.txt: $(FLOW_BINS)
 	shasum -a 256 $^ > $@
 
 get-flow = \
-	curl -O -L https://github.com/facebook/flow/releases/download/v$(*F)/$(@D).zip; \
+	curl -O -L $(BASE_URL)$(*F)/$(@D).zip; \
 	unzip $(@D).zip flow/$(@F); \
 	mv flow $(@D); \
 	rm $(@D).zip; \
