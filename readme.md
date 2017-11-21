@@ -34,7 +34,7 @@ execFile(flow, ['check'], (err, stdout) => {
 
 ## License
 
-flow-bin is BSD-licensed. We also provide an additional patent grant.
+flow-bin is MIT-licensed.
 
 
 ## Releases
