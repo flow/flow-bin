@@ -2,7 +2,7 @@
   "name": "flow-bin",
   "version": "0.59.0",
   "description": "Binary wrapper for Flow - A static type checker for JavaScript",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "repository": "flowtype/flow-bin",
   "author": {
     "name": "Sindre Sorhus",
