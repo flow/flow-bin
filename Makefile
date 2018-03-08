@@ -2,7 +2,6 @@ FLOW_VERSION ?= $(shell node -p 'require("./package.json").version')
 FLOW_BINS = \
 	flow-linux64-v$(FLOW_VERSION)/flow \
 	flow-osx-v$(FLOW_VERSION)/flow \
-	flow-win64-v$(FLOW_VERSION)/flow.exe
 
 .PHONY: all
 all: clean build test
