@@ -2,17 +2,23 @@
 
 > Binary wrapper for [Flow](http://flowtype.org) - A static type checker for JavaScript
 
-OS X, Linux (64-bit) and Windows binaries are currently [provided](http://flowtype.org/docs/getting-started.html#_).
+OS X, Linux (64-bit) and Windows binaries are currently [provided](https://flow.org/en/docs/install/).
 
 
 ## CLI
 
-```
-$ npm install --global flow-bin
-```
+For Yarn:
 
 ```
-$ flow --help
+$ yarn add --dev flow-bin
+$ yarn run flow --help
+```
+
+For npm, add `{ "scripts": { "flow": "flow" } }` in package.json and run:
+
+```
+$ npm install --save-dev flow-bin
+$ npm run flow --help
 ```
 
 
@@ -41,22 +47,8 @@ flow-bin is MIT-licensed.
 
 ### New Release
 
-1. Update the "version" in `package.json` to reflect the flow version to publish. (For now, `flow-bin`'s version is also the version of the `flow` binary).
-2. Run `make`.
-  * There should be 2 uncommitted changes at this point: `SHASUM256.txt` and `package.json`.
-3. Commit the changes with the message `Updated binary to v0.30.0`, with the correct version.
-4. Push/merge to `master`.
-5. Tag the update:
-
-  ```sh
-  git checkout master &&
-  git pull &&
-  make test &&
-  git tag v$(node -p 'require("./package.json").version') &&
-  git push v$(node -p 'require("./package.json").version')
-  ```
-
-6. Publish to npm.
+1. `make push VERSION=0.122.0` (use the same version as Flow)
+2. Publish to npm: `make publish` (run `npm adduser` the first time to log in)
 
 ### Inspect a Release Before Publishing
 
