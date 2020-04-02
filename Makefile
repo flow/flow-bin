@@ -1,4 +1,5 @@
-FLOW_VERSION ?= $(shell node -p 'require("./package.json").version')
+VERSION ?= $(shell node -p 'require("./package.json").version')
+FLOW_VERSION := $(patsubst v%,%,$(VERSION))
 FLOW_BINS = \
 	flow-linux64-v$(FLOW_VERSION)/flow \
 	flow-osx-v$(FLOW_VERSION)/flow \
@@ -11,6 +12,11 @@ all: clean build test
 clean:
 	rm -rf flow-*-v* SHASUM256.txt
 
+.PHONY: bump
+bump:
+	sed -i.bak 's/"version": ".*"/"version": "$(FLOW_VERSION)"/' package.json
+	rm package.json.bak
+
 .PHONY: test
 test: $(FLOW_BINS)
 	shasum -c SHASUM256.txt
@@ -18,6 +24,13 @@ test: $(FLOW_BINS)
 
 .PHONY: build
 build: clean SHASUM256.txt
+
+.PHONY: push
+push: build test
+	git commit -am "v$(FLOW_VERSION)"
+	git tag -a "v$(FLOW_VERSION)" -m "v$(FLOW_VERSION)"
+	git push
+	git push --tags
 
 SHASUM256.txt: $(FLOW_BINS)
 	shasum -a 256 $^ > $@
