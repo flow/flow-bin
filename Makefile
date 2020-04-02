@@ -24,7 +24,7 @@ test: $(FLOW_BINS)
 	node test.js
 
 .PHONY: build
-build: clean SHASUM256.txt
+build: clean bump SHASUM256.txt
 
 .PHONY: push
 push: build test
