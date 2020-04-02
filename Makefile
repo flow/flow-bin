@@ -10,6 +10,7 @@ all: clean build test
 
 .PHONY: clean
 clean:
+	rm -f .npmrc
 	rm -rf flow-*-v* SHASUM256.txt
 
 .PHONY: bump
@@ -31,6 +32,15 @@ push: build test
 	git tag -a "v$(FLOW_VERSION)" -m "v$(FLOW_VERSION)"
 	git push
 	git push --tags
+
+.PHONY: publish
+publish:
+ifneq ("$(NPM_TOKEN)", "")
+	@echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+else
+	@echo "NPM_TOKEN not set. Either set a token or run 'npm adduser' to log in"
+endif
+	npm publish --tag $(if $(findstring -,$(FLOW_VERSION)),next,latest)
 
 SHASUM256.txt: $(FLOW_BINS)
 	shasum -a 256 $^ > $@

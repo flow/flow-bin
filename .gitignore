@@ -1,3 +1,4 @@
+.npmrc
 node_modules
 /flow-*-v*/
 *.swp
