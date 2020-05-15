@@ -28,8 +28,8 @@ build: clean bump SHASUM256.txt
 
 .PHONY: push
 push: build test
-	git commit -am "v$(FLOW_VERSION)"
-	git tag -a "v$(FLOW_VERSION)" -m "v$(FLOW_VERSION)"
+	git diff --quiet && git diff --staged --quiet || git commit -am "v$(FLOW_VERSION)"
+	git tag -l "v$(FLOW_VERSION)" || git tag -a "v$(FLOW_VERSION)" -m "v$(FLOW_VERSION)"
 	git push
 	git push --tags
 
