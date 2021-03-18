@@ -21,6 +21,7 @@
   },
   "files": [
     "flow-linux64-v*/flow",
+    "flow-linux-arm64-v*/flow",
     "flow-osx-v*/flow",
     "flow-win64-v*/flow.exe",
     "vendor",

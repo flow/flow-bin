@@ -11,9 +11,15 @@ process.platform = 'darwin';
 delete require.cache[require.resolve('./')];
 fs.statSync(require('./'));
 
-// linux
+// linux x64
 process.platform = 'linux';
 process.arch = 'x64'
+delete require.cache[require.resolve('./')];
+fs.statSync(require('./'));
+
+// linux arm64
+process.platform = 'linux';
+process.arch = 'arm64'
 delete require.cache[require.resolve('./')];
 fs.statSync(require('./'));
 

@@ -14,6 +14,8 @@ module.exports =
     ? path.join(__dirname, 'flow-osx-v' + VERSION, 'flow') :
   process.platform === 'linux' && process.arch === 'x64'
     ? path.join(__dirname, 'flow-linux64-v' + VERSION, 'flow') :
+  process.platform === 'linux' && process.arch === 'arm64'
+    ? path.join(__dirname, 'flow-linux-arm64-v' + VERSION, 'flow') :
   process.platform === 'win32' &&  process.arch === 'x64'
     ? path.join(__dirname, 'flow-win64-v' + VERSION, 'flow.exe') :
   null;

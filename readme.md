@@ -2,7 +2,7 @@
 
 > Binary wrapper for [Flow](http://flowtype.org) - A static type checker for JavaScript
 
-OS X, Linux (64-bit) and Windows binaries are currently [provided](https://flow.org/en/docs/install/).
+macOS (x64), Linux (x64, arm64) and Windows (x64) binaries are currently [provided](https://flow.org/en/docs/install/).
 
 
 ## CLI

@@ -2,6 +2,7 @@ VERSION ?= $(shell node -p 'require("./package.json").version')
 FLOW_VERSION := $(patsubst v%,%,$(VERSION))
 FLOW_BINS = \
 	flow-linux64-v$(FLOW_VERSION)/flow \
+	flow-linux-arm64-v$(FLOW_VERSION)/flow \
 	flow-osx-v$(FLOW_VERSION)/flow \
 	flow-win64-v$(FLOW_VERSION)/flow.exe
 
@@ -53,6 +54,9 @@ get-flow = \
 	touch $@
 
 flow-linux64-v%/flow:
+	$(get-flow)
+
+flow-linux-arm64-v%/flow:
 	$(get-flow)
 
 flow-osx-v%/flow:
