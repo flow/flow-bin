@@ -27,7 +27,9 @@
     "vendor",
     "cli.js",
     "index.js",
-    "SHASUM256.txt"
+    "SHASUM256.txt",
+    "SHASUM256.txt.sign",
+    "signing.pem"
   ],
   "keywords": [
     "cli-app",

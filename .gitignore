@@ -2,3 +2,4 @@
 node_modules
 /flow-*-v*/
 *.swp
+/signing.key
