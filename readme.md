@@ -1,6 +1,6 @@
-# flow-bin [![Build Status](https://travis-ci.org/flowtype/flow-bin.svg?branch=master)](https://travis-ci.org/flowtype/flow-bin)
+# flow-bin
 
-> Binary wrapper for [Flow](http://flowtype.org) - A static type checker for JavaScript
+> Binary wrapper for [Flow](https://flow.org) - A static type checker for JavaScript
 
 macOS (x64), Linux (x64, arm64) and Windows (x64) binaries are currently [provided](https://flow.org/en/docs/install/).
 
