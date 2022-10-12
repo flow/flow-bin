@@ -1,6 +1,6 @@
 {
   "name": "flow-bin",
-  "version": "0.188.2",
+  "version": "0.189.0",
   "description": "Binary wrapper for Flow - A static type checker for JavaScript",
   "license": "MIT",
   "repository": "flowtype/flow-bin",
