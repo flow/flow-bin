@@ -6,8 +6,15 @@
  */
 var fs = require('fs');
 
-// osx
+// osx x64
 process.platform = 'darwin';
+process.arch = 'x64'
+delete require.cache[require.resolve('./')];
+fs.statSync(require('./'));
+
+// osx arm64
+process.platform = 'darwin';
+process.arch = 'arm64'
 delete require.cache[require.resolve('./')];
 fs.statSync(require('./'));
 
