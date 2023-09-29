@@ -45,7 +45,7 @@ ifneq ("$(NPM_TOKEN)", "")
 else
 	@echo "NPM_TOKEN not set. Either set a token or run 'npm adduser' to log in"
 endif
-	npm publish --tag $(if $(findstring -,$(FLOW_VERSION)),next,latest)
+	npm publish --tag $(if $(findstring -,$(FLOW_VERSION)),next,latest) --force
 
 SHASUM256.txt: $(FLOW_BINS)
 	shasum -a 256 $^ > $@
@@ -98,7 +98,7 @@ endif
 signing.pem: signing.key
 	openssl rsa -in "$<" -pubout -out "$@"
 
-%.sign: % signing.key 
+%.sign: % signing.key
 	openssl dgst -sign signing.key -sha256 -out "$@.bin" -binary "$<"
 	openssl base64 -in "$@.bin" -out "$@"
 	rm -f "$@.bin"
