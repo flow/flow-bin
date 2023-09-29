@@ -45,7 +45,7 @@ ifneq ("$(NPM_TOKEN)", "")
 else
 	@echo "NPM_TOKEN not set. Either set a token or run 'npm adduser' to log in"
 endif
-	/data/users/samzhou19815/fbsource/xplat/third-party/node/bin/npm publish --tag $(if $(findstring -,$(FLOW_VERSION)),next,latest) --force
+	npm publish --tag $(if $(findstring -,$(FLOW_VERSION)),next,latest)
 
 SHASUM256.txt: $(FLOW_BINS)
 	shasum -a 256 $^ > $@
