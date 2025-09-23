@@ -11,7 +11,7 @@ var path = require('path');
 
 module.exports =
   process.platform === 'darwin'
-    ? path.join(__dirname, 'flow-osx-v' + VERSION, 'flow') :
+    ? path.join(__dirname, 'flow-osx-arm64-v' + VERSION, 'flow') :
   process.platform === 'linux' && process.arch === 'x64'
     ? path.join(__dirname, 'flow-linux64-v' + VERSION, 'flow') :
   process.platform === 'linux' && process.arch === 'arm64'

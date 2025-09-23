@@ -8,6 +8,7 @@ var fs = require('fs');
 
 // osx
 process.platform = 'darwin';
+process.arch = 'arm64'
 delete require.cache[require.resolve('./')];
 fs.statSync(require('./'));
 

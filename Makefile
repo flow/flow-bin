@@ -3,7 +3,7 @@ FLOW_VERSION := $(patsubst v%,%,$(VERSION))
 FLOW_BINS = \
 	flow-linux64-v$(FLOW_VERSION)/flow \
 	flow-linux-arm64-v$(FLOW_VERSION)/flow \
-	flow-osx-v$(FLOW_VERSION)/flow \
+	flow-osx-arm64-v$(FLOW_VERSION)/flow \
 	flow-win64-v$(FLOW_VERSION)/flow.exe
 
 .PHONY: all
@@ -63,7 +63,7 @@ flow-linux64-v%/flow:
 flow-linux-arm64-v%/flow:
 	$(get-flow)
 
-flow-osx-v%/flow:
+flow-osx-arm64-v%/flow:
 	$(get-flow)
 
 flow-win64-v%/flow.exe:

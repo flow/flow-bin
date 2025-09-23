@@ -22,7 +22,7 @@
   "files": [
     "flow-linux64-v*/flow",
     "flow-linux-arm64-v*/flow",
-    "flow-osx-v*/flow",
+    "flow-osx-arm64-*/flow",
     "flow-win64-v*/flow.exe",
     "vendor",
     "cli.js",
