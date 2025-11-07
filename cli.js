@@ -11,8 +11,11 @@ var input = process.argv.slice(2);
 var bin = require('./');
 
 if (bin !== null) {
-  spawn(bin, input, {stdio: 'inherit'})
+  var child = spawn(bin, input, {stdio: 'inherit'})
     .on('exit', process.exit);
+  process.on('SIGTERM', function() {
+    child.kill();
+  });
 } else {
   throw new Error('Platform not supported.');
 }
