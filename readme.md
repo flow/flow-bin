@@ -4,6 +4,9 @@
 
 macOS (arm64), Linux (x64, arm64) and Windows (x64) binaries are currently [provided](https://flow.org/en/docs/install/).
 
+## Source Code
+
+The source code for Flow can be found in the [facebook/flow](https://github.com/facebook/flow) repository. This repository (`flow-bin`) provides binary releases for Flow.
 
 ## CLI
 
