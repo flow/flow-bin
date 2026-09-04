@@ -1,9 +1,11 @@
 # flow-bin
 
+> [!IMPORTANT]
+Development has been moved to https://github.com/facebook/flow/tree/main/packages/flow-bin
+
 > Binary wrapper for [Flow](https://flow.org) - A static type checker for JavaScript
 
 macOS (arm64), Linux (x64, arm64) and Windows (x64) binaries are currently [provided](https://flow.org/en/docs/install/).
-
 
 ## CLI
 
